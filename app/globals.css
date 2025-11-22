@@ -1,0 +1,135 @@
+:root {
+  color-scheme: light dark;
+  font-family: var(--font-body, "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif);
+  background: radial-gradient(circle at top left, #101828, #0b1120);
+  color: #f8fafc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  width: min(920px, 92vw);
+  padding: 48px;
+  border-radius: 32px;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(24px);
+  box-shadow: 0 16px 48px rgba(15, 23, 42, 0.5);
+  display: grid;
+  gap: 40px;
+}
+
+.hero {
+  text-align: left;
+  display: grid;
+  gap: 16px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4vw, 3.25rem);
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  margin: 0;
+  color: #cbd5f5;
+  font-size: 1.05rem;
+}
+
+.tag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #60a5fa;
+}
+
+.prompt-card {
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.28), rgba(218, 70, 239, 0.28));
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 24px;
+  padding: 32px;
+  display: grid;
+  gap: 24px;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.prompt-card p {
+  margin: 0;
+}
+
+.button {
+  justify-self: start;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(120deg, #2563eb, #7c3aed);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.tips {
+  background: rgba(15, 33, 70, 0.4);
+  border-radius: 24px;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+  padding: 24px 32px;
+  display: grid;
+  gap: 16px;
+}
+
+.tips h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  color: #93c5fd;
+}
+
+.tips ul {
+  margin: 0;
+  padding-left: 20px;
+  display: grid;
+  gap: 10px;
+  color: #e2e8f0;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 32px;
+    border-radius: 24px;
+    gap: 32px;
+  }
+
+  .prompt-card {
+    font-size: 1.15rem;
+  }
+
+  .button {
+    width: 100%;
+    justify-self: stretch;
+    text-align: center;
+  }
+}
